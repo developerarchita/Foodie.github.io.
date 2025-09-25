@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Archita Foodie — Restaurant</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+        <img src="assets/logo.svg" alt="Archita Foodie logo" class="logo" />
+        <span>Archita Foodie</span>
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Open menu">☰</button>
+      <nav id="nav" class="nav">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button class="btn btn-primary" id="reserve-btn">Reserve</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Archita Foodie</h1>
+          <p class="lead">Discover handcrafted dishes, bold flavors, and a warm, modern dining experience.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#menu">See Menu</a>
+            <a class="btn" href="#about">Our Story</a>
+          </div>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <div class="plate"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section">
+      <div class="container">
+        <h2 class="section-title">Popular Menu</h2>
+        <p class="section-sub">Handpicked favorites — seasonal & chef's specials.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="card-media"></div>
+            <div class="card-body">
+              <h3>Spicy Paneer Tikka</h3>
+              <p>Grilled paneer cubes marinated in smoky spices. Served with mint chutney.</p>
+              <div class="card-foot">
+                <strong>₹249</strong>
+                <button class="btn add-cart">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media"></div>
+            <div class="card-body">
+              <h3>Archita's Butter Chicken</h3>
+              <p>Classic butter chicken simmered in a rich tomato gravy.</p>
+              <div class="card-foot">
+                <strong>₹299</strong>
+                <button class="btn add-cart">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media"></div>
+            <div class="card-body">
+              <h3>Vegan Buddha Bowl</h3>
+              <p>Quinoa, roasted vegetables, chickpeas & tahini dressing.</p>
+              <div class="card-foot">
+                <strong>₹199</strong>
+                <button class="btn add-cart">Add</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container about-grid">
+        <div>
+          <h2>About Archita Foodie</h2>
+          <p>We're a cozy spot celebrating fresh local ingredients with bold, modern flavors. We focus on seasonal produce, responsibly sourced proteins, and creative plating.</p>
+          <ul class="highlights">
+            <li>Fresh, seasonal menu</li>
+            <li>Comfortable modern dining</li>
+            <li>Online reservations & takeaway</li>
+          </ul>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+        <div class="about-image" aria-hidden="true">
+          <div class="dish"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact & Reservation</h2>
+        <p>Call us at <strong>+91 98765 43210</strong> or use the form below.</p>
+        <form id="contact-form" class="form">
+          <div class="form-row">
+            <label>Name<input type="text" id="name" required></label>
+            <label>Email<input type="email" id="email" required></label>
+          </div>
+          <div class="form-row">
+            <label>Phone<input type="tel" id="phone" required></label>
+            <label>Date<input type="date" id="date" required></label>
+          </div>
+          <label>Message<textarea id="message" rows="4" placeholder="Any requests"></textarea></label>
+          <div class="form-foot">
+            <button class="btn btn-primary" type="submit">Send</button>
+            <button class="btn" type="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 Archita Foodie — All rights reserved</div>
+      <div class="socials">Follow us: <a href="#" aria-label="Instagram">IG</a> · <a href="#" aria-label="Facebook">FB</a></div>
+    </div>
+  </footer>
+
+  <!-- Reservation modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button id="modal-close" class="modal-close" aria-label="Close">✕</button>
+      <h3 id="modal-title">Quick Reservation</h3>
+      <form id="reserve-form" class="form">
+        <label>Your name<input type="text" id="rname" required></label>
+        <label>Phone<input type="tel" id="rphone" required></label>
+        <label>Date & time<input type="datetime-local" id="rdatetime" required></label>
+        <div class="form-foot"><button class="btn btn-primary" type="submit">Request</button></div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
